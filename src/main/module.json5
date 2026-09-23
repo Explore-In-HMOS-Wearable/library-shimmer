@@ -1,0 +1,9 @@
+{
+  "module": {
+    "name": "shimmer",
+    "type": "har",
+    "deviceTypes": [
+      "wearable"
+    ]
+  }
+}

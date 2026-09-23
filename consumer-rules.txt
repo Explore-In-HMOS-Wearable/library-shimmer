@@ -1,0 +1,69 @@
+# Obfuscation keep rules applied to every module that depends on this package.
+#
+# Two things break under name mangling: fields read by name off a plain
+# interface, and the string literals @Monitor is given.
+
+-keep-property-name
+# ShimmerOptions and ResolvedShimmerOptions
+isEnabled
+autoStart
+controller
+repeatCount
+startDelay
+repeatDelay
+duration
+direction
+tilt
+curve
+paintMode
+highlightColor
+baseColor
+highlightOpacity
+baseOpacity
+intensity
+dropOff
+widthRatio
+borderRadius
+syncGroup
+pauseWhenInvisible
+respectsReducedMotion
+accessibilityText
+
+# ShimmerBand
+length
+thickness
+originX
+originY
+rotationAngle
+travelX
+travelY
+
+# ShimmerGradientStop
+color
+position
+
+# ShimmerClockTiming
+# duration, startDelay, repeatDelay, repeatCount, curve, playMode already listed
+
+# ShimmerPaletteInput
+readResource
+
+# ShimmerRgba
+red
+green
+blue
+alpha
+
+# Watched by @Monitor in Shimmer
+options
+contentWidth
+contentHeight
+isVisibleOnScreen
+
+# Read off a Resource by ShimmerColor
+id
+
+-keep-global-name
+ShimmerDefaults
+ShimmerPresets
+ShimmerController
